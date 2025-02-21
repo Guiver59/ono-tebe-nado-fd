@@ -13,7 +13,6 @@
 
 .header__menu {
   width: 391.48px;
-  height: 22px;
 }
 
 .header__menu .header__links-list {
@@ -29,11 +28,13 @@
   letter-spacing: 1.2px;
 }
 
-.li_without_marker { /*сделал так, потому что встречается в разных классах, не стал привязывать "header__links-list-item"*/
+.li_without_marker {
+  /*сделал так, потому что встречается в разных классах, не стал привязывать "header__links-list-item"*/
   list-style: none;
 }
 
-.link_without_underline {/*тут аналогично*/
+.link_without_underline {
+  /*тут аналогично*/
   text-decoration: none;
 }
 
@@ -61,8 +62,6 @@
 .telefone {
   width: 239.48px;
   border-width: 1px;
-  font-weight: 400;
-  font-size: 18px;
   line-height: 24.3px;
 }
 
@@ -90,7 +89,6 @@
   flex-direction: column;
   justify-content: space-between;
   width: 1100px;
-  height: 757px; /*тут оставил высоту т.к. это высота всей секции и в 1 спринте в теме 12 уроке 2 шаг 5 сказано Хорошим подходом будет сначала сверстать обложку примерно, а потом уточнить размеры через наложение изображения в плагине Pixel Perfect для браузера.*/
   padding: 165px 50px 50px 50px;
   background-image: url("../images/cover.jpg");
   background-position: center;
@@ -151,6 +149,7 @@
   justify-content: space-between;
   width: 1000px;
   border-width: 1px;
+  padding-top: 106px;
   font-size: 22px;
   text-transform: uppercase;
   word-spacing: 3px;
@@ -228,7 +227,10 @@ height: 28px;*/
 .card {
   z-index: 1;
   width: 334px;
-  height: 596px; /*тут оставил высоту т.к. это высота карточки*/
+  /*карточки разве не должны быть одного размера? 
+  Если размер текста превышает размер карточки,
+  не лучше бы просто его скрыть через overflow?*/
+  min-height: 596px; /*тут оставил высоту т.к. это высота карточки*/
   background-position: center;
   background-size: cover;
 }
@@ -246,7 +248,6 @@ height: 28px;*/
 }
 
 .lots__look-more-link {
-  /*position: relative;*/
   width: 192px;
   margin: 30px 40px 0 40px;
   font-size: 20px;
@@ -314,7 +315,6 @@ height: 28px;*/
 }
 
 .footer__address {
-  left: 50px;
   justify-self: center;
   width: 264.57px;
   word-break: keep-all;
